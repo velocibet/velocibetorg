@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: #000000;
+  background-image: url('/images/background01.jpg');
+  background-repeat: repeat;
+  background-position: center;
+  background-size: 250px 250px; 
+  color: #000000;
+  line-height: 1.5;
+  font-family: 'IsYun', 'sans-serif';
+  font-size: 1.3rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  /* margin: 30px 0; */
+  width: 50%;
+  min-width: 800px;
+  min-height: 100vh;
+  max-width: 800px;
+  padding: 1rem;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+section {
+  border: 3px solid #aed6ff;
+}
+
+@media (max-width: 768px) {
+  main {
+    min-width: 320px;
+  }
+}
+
+@font-face {
+    font-family: 'IsYun';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}

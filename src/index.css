@@ -1,0 +1,95 @@
+header {
+    margin: 0;
+    padding: 0;
+}
+
+header img {
+    width: 100%;
+    height: auto;
+}
+
+.content-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+}
+
+.social-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+    width: 150px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.main-content {
+    flex: 1;
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #aed6ff;
+}
+
+.hidden-image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100px;
+    height: auto;
+    opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+  .content-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  aside {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .profile-container,
+  .social-container {
+    width: auto;
+  }
+
+  .main-content {
+    margin: 20px 0 0 0;
+    width: 100%;
+  }
+
+  .hidden-image {
+    display: none;
+  }
+}
