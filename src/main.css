@@ -35,6 +35,11 @@ section {
   border: 3px solid #aed6ff;
 }
 
+button {
+  font-family: 'PyeongchangPeace', 'sans-serif';
+  cursor: pointer;
+}
+
 @media (max-width: 768px) {
   main {
     min-width: 320px;
@@ -45,5 +50,19 @@ section {
     font-family: 'IsYun';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff') format('woff');
     font-weight: normal;
+    font-display: swap;
+}
+
+/* @font-face {
+    font-family: 'PyeongchangPeace';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+} */
+
+@font-face {
+    font-family: 'PyeongchangPeace';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+    font-weight: 700;
     font-display: swap;
 }

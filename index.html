@@ -10,11 +10,22 @@
     <link rel="stylesheet" href="/src/index.css" />
   </head>
   <body>
+    <nav class="sidebar">
+      <button id="nav-btn-1" class="sidebar-btn">
+        <span class="slanted-text">메인</span>
+      </button>
+      <button id="nav-btn-2" class="sidebar-btn">
+        <span class="slanted-text">갤러리</span>
+      </button>
+      <button id="nav-btn-3" class="sidebar-btn">
+        <span class="slanted-text">블로그</span>
+      </button>
+    </nav>
     <main>
       <header>
         <img src="/images/header01.jpg" alt="header01" >
       </header>
-      <div class="content-container">
+      <div class="content-container-01">
         <aside>
           <section class="profile-container">
             <img src="https://pbs.twimg.com/profile_images/2006961415756886016/dOUDJt7G_400x400.jpg" alt="profile" class="profile-image">
@@ -32,6 +43,10 @@
               <span>Github</span>
             </a>
           </section>
+          <section class="visitor-container">
+            <p>총 방문자 수</p>
+            <p><span id="visitor-count">0</span>명</p>
+          </section>
         </aside>
         <div class="main-content">
           <h1>velocibetorg</h1>
@@ -39,18 +54,35 @@
           <h3>아무곳이나 누르면 노래가 자동재생 됩니다.</h3>
         </div>
       </div>
-      <marquee>
-        <img src="/images/marquee/arisu.gif">
-        <img src="/images/marquee/chiruno.gif">
-        <img src="/images/marquee/madoka.png">
-        <img src="/images/marquee/mikuhatsune.png">
-        <img src="/images/marquee/yuyuko.gif">
-        <img src="/images/marquee/lucky.gif">
-        <img src="/images/marquee/madokamagika.gif">
-        <img src="/images/marquee/dance.gif">
-      </marquee>
+      <div class="content-container-02">
+        <h1>갤러리</h1>
+        <p>저는 주로 손그림을 종종 그리는데요! 아래에 있는 그림들은 모두 제가 그린 그림들입니다. 얼마 전에 '봇치 더 록!' 이라는 애니메이션을 너무 재미있게 봐서 관련 캐릭터들을 주로 그리고 있습니다.</p>
+        <div class="image-list">
+          <div class="image">
+            <img id="imageElement" src="/images/gallery/1.jpg">
+          </div>
+          <div class="image">
+            <img id="imageElement" src="/images/gallery/2.jpg">
+          </div>
+          <div class="image">
+            <img id="imageElement" src="/images/gallery/3.jpg">
+          </div>
+        </div>
+      </div>
+      <div class="content-container-03">
+        블로그를 곧 제작할 예정입니다! 많관부!
+      </div>
       <footer>
-        <p>방문자 수: <span id="visitor-count">0</span>명</p>
+        <marquee>
+          <img src="/images/marquee/arisu.gif">
+          <img src="/images/marquee/chiruno.gif">
+          <img src="/images/marquee/madoka.png">
+          <img src="/images/marquee/mikuhatsune.png">
+          <img src="/images/marquee/yuyuko.gif">
+          <img src="/images/marquee/lucky.gif">
+          <img src="/images/marquee/madokamagika.gif">
+          <img src="/images/marquee/dance.gif">
+        </marquee>
         <span>© 2026 velocibetorg. All rights reserved.</span>
       </footer>
     </main>
