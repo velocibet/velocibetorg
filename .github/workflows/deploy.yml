@@ -1,4 +1,4 @@
-# GitHub Pages를 통해 정적 콘텐츠를 배포하는 간단한 워크플로우
+# GitHub Pages를 통해 정적 콘텐츠를 배포하는 워크플로우
 name: Deploy static content to Pages
 
 on:
@@ -21,7 +21,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  # 단순히 배포만 수행하기에 하나의 잡으로만 구성
+  # 빌드 및 배포 작업
   deploy:
     environment:
       name: github-pages
@@ -30,22 +30,43 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      # --- Rust 및 Wasm 빌드 단계 추가 ---
+      - name: Install Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-unknown-unknown
+
+      - name: Install wasm-pack
+        run: curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+
+      - name: Build Rust Wasm
+        run: |
+          cd botchi_game
+          wasm-pack build --target web
+      # ----------------------------------
+
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
           node-version: lts/*
           cache: 'npm'
+
       - name: Install dependencies
         run: npm ci
+
       - name: Build
         run: npm run build
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           # dist 폴더 업로드
           path: './dist'
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
