@@ -8,6 +8,27 @@ header img {
     height: auto;
 }
 
+aside {
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+    gap: 10px;
+}
+
+aside * {
+    width: 100%;
+    text-align: center;
+}
+
+.guestbook-chat {
+    height: 150px;
+    overflow-y: scroll;
+}
+
+.guestbook-entry {
+    text-align: left;
+}
+
 .content-container-01 {
     display: flex;
     justify-content: flex-start;
@@ -17,12 +38,12 @@ header img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 150px;
+    width: 100%
 }
 
 .profile-image {
-    width: 150px;
-    height: 150px;
+    width: 100%;
+    height: auto;
 }
 
 .social-container {
@@ -31,8 +52,8 @@ header img {
     justify-content: center;
     align-items: center;
     gap: 15px;
-    margin-top: 10px;
-    width: 150px;
+    /* margin-top: 10px; */
+    width: 100%;
 }
 
 .social-link {
@@ -51,8 +72,8 @@ header img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 10px;
-    width: 150px;
+    /* margin-top: 10px; */
+    width: 100%;
 }
 
 .main-content {
@@ -78,7 +99,7 @@ header img {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    margin-top: 300px;
+    margin-top: 380px;
 }
 
 .sidebar button {

@@ -25,10 +25,11 @@
       <header>
         <img src="/images/header01.jpg" alt="header01" >
       </header>
+      <marquee>노래: あのバンド - 結束バンド</marquee>
       <div class="content-container-01">
         <aside>
           <section class="profile-container">
-            <img src="https://pbs.twimg.com/profile_images/2006961415756886016/dOUDJt7G_400x400.jpg" alt="profile" class="profile-image">
+            <img src="https://pbs.twimg.com/profile_images/2031756746931449856/ndeN91dM_400x400.jpg" alt="profile" class="profile-image">
             <h5>벨로시벳</h5>
             <span>2008. 09. 26</span>
           </section>
@@ -43,6 +44,44 @@
               <span>Github</span>
             </a>
           </section>
+          <section class="guestbook-section">
+            <h3>방명록</h3>
+            <div class="guestbook-chat">
+
+            </div>
+
+            <form id="guestbook-form" class="space-y-4">
+              <div>
+                <label for="username" class="">이름</label>
+                <input 
+                  type="text" 
+                  id="username" 
+                  name="username" 
+                  placeholder="이름을 입력하세요" 
+                  required
+                />
+              </div>
+
+              <div>
+                <label for="content" class="">내용</label>
+                <input 
+                  type="text"
+                  id="content" 
+                  name="content" 
+                  placeholder="하고 싶은 말을 남겨보세요" 
+                  required 
+                  rows="4"
+                ></input>
+              </div>
+
+              <button 
+                type="submit" 
+                class=""
+              >
+                남기기
+              </button>
+            </form>
+          </section>
           <section class="visitor-container">
             <p>총 방문자 수</p>
             <p><span id="visitor-count">0</span>명</p>
@@ -50,8 +89,17 @@
         </aside>
         <div class="main-content">
           <h1>velocibetorg</h1>
-          <span>velocibetorg에 어서오세요. 갑자기 정신이 번쩍들어 만들게 된 정체불명의 개인 사이트이자 오타쿠 감성 보관소입니다. 오타쿠 감성 개인 홈페이지의 혼을 느껴주세요. 환영합니다. 이곳은 벨로시벳의 세계관입니다. <br> 갤러리, 좋아하는 애니메이션 목록, 취미 등 여러가지를 늘어놓을 예정입니다.</span>
           <h3>아무곳이나 누르면 노래가 자동재생 됩니다.</h3>
+          <span>velocibetorg에 어서오세요. 갑자기 정신이 번쩍들어 만들게 된 정체불명의 개인 사이트이자 오타쿠 감성 보관소입니다. 오타쿠 감성 개인 홈페이지의 혼을 느껴주세요. 환영합니다. 이곳은 벨로시벳의 세계관입니다. <br> 갤러리, 좋아하는 애니메이션 목록, 취미 등 여러가지를 늘어놓을 예정입니다.</span>
+
+          </br>
+
+          <h3>봇치 피하기 게임!</h3>
+          <span>야마다 료가 되어 봇치를 피해보세요. </br> 조작법: 화면 클릭 또는 스페이스바</span>
+
+          <canvas id="game-canvas" width="400" height="400"></canvas>
+          <button id="start-btn">게임 시작</button>
+          <button id="restart-btn" style="display: none;">다시 시작</button>
         </div>
       </div>
       <div class="content-container-02">
@@ -68,9 +116,6 @@
             <img id="imageElement" src="/images/gallery/3.jpg">
           </div>
         </div>
-      </div>
-      <div class="content-container-03">
-        블로그를 곧 제작할 예정입니다! 많관부!
       </div>
       <footer>
         <marquee>
@@ -90,5 +135,6 @@
 
     <audio id="bgm" src="/music/bgm.mp3" loop></audio>
     <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/game.js"></script>
   </body>
 </html>
