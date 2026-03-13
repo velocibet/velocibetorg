@@ -23,5 +23,5 @@
 **퍼가실 땐 댓글 한 줄 부탁드려요~ @(^.^)@**
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=ffb6c1&height=150&section=footer&text=(づ｡◕‿‿◕｡)づ&fontSize=40" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=aed6ff&height=150&section=footer&text=(づ｡◕‿‿◕｡)づ&fontSize=30" />
 </p>
