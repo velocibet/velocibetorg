@@ -21,7 +21,6 @@ body {
 main {
   display: flex;
   flex-direction: column;
-  /* margin: 30px 0; */
   width: 45%;
   min-width: 800px;
   min-height: 100vh;
@@ -42,7 +41,14 @@ button {
 
 @media (max-width: 768px) {
   main {
-    min-width: 320px;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    padding: 0.5rem;
+  }
+  
+  body {
+    font-size: 1.1rem;
   }
 }
 
@@ -52,13 +58,6 @@ button {
     font-weight: normal;
     font-display: swap;
 }
-
-/* @font-face {
-    font-family: 'PyeongchangPeace';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Light.woff2') format('woff2');
-    font-weight: 300;
-    font-display: swap;
-} */
 
 @font-face {
     font-family: 'PyeongchangPeace';
